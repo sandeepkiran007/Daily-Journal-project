@@ -1,0 +1,11 @@
+<%- include("partials/header") -%>
+<h1>Home</h1>
+<p><%= homeText %></p>
+<% postArr.forEach(function(element){%>
+<% var postTitle = element.title; %>
+<% var postBody = element.body; %>
+<h2><%= postTitle %></h2>
+<p class="para"><%= postBody.slice(0, 100) + " ..." %> <a href="/posts/<%=postTitle%>">click me</a> </p>
+<%  }); %>
+
+<%- include("partials/footer") -%>
